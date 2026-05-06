@@ -1,159 +1,149 @@
 <div class="page theme-minimal" id="page">
-  <div class="theme-flash" id="themeFlash"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+	<div class="theme-flash" id="themeFlash"></div>
+	<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <div class="ambient ambient-1" data-parallax="20"></div>
-  <div class="ambient ambient-2" data-parallax="30"></div>
-  <div class="ambient ambient-3" data-parallax="14"></div>
+	<div class="ambient ambient-1" data-parallax="20"></div>
+	<div class="ambient ambient-2" data-parallax="30"></div>
+	<div class="ambient ambient-3" data-parallax="14"></div>
 
-  <header class="topbar" data-reveal="fade-down">
-    <div class="brand" aria-label="LUMA">LUMA</div>
+	<header class="topbar" data-reveal="fade-down">
+		<div class="brand" aria-label="LUMA">LUMA</div>
 
-    <div class="controls-group">
-      <div class="controls">
-        <label for="themeSelect" class="theme-label">Style</label>
-        <select id="themeSelect" aria-label="Choose style">
-          <option value="minimal">Minimal</option>
-          <option value="retro">Playful Retro</option>
-          <option value="luxury">Luxury Editorial</option>
-        </select>
-      </div>
+		<div class="controls-group">
+			<div class="controls">
+				<label for="themeSelect" class="theme-label">Style</label>
+				<select id="themeSelect" aria-label="Choose style">
+					<option value="minimal">Minimal</option>
+					<option value="retro">Playful Retro</option>
+					<option value="luxury">Luxury Editorial</option>
+				</select>
+			</div>
 
-      <div class="lang-toggle" role="group" aria-label="Choose language">
-        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
-      </div>
+			<div class="lang-toggle" role="group" aria-label="Choose language">
+				<button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+				<button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
+			</div>
 
-      <button type="button" class="replay-btn" id="replayIntroBtn">Replay Intro</button>
-    </div>
-  </header>
+			<button type="button" class="replay-btn" id="replayIntroBtn">Replay Intro</button>
+		</div>
+	</header>
 
-  <main class="split-layout">
-    <section class="content" data-reveal="fade-up">
-      <p class="status-badge" id="statusBadge">Private Beta • July 2026</p>
-      <p class="eyebrow" id="eyebrow">May 2026 CodePen Challenge</p>
+	<main class="split-layout">
+		<section class="content" data-reveal="fade-up">
+			<p class="status-badge" id="statusBadge">Private Beta • July 2026</p>
+			<p class="eyebrow" id="eyebrow">May 2026 CodePen Challenge</p>
 
-      <h1 id="title">
-        A calmer way
-        <span>to launch</span>
-        what’s next.
-      </h1>
+			<h1 id="title">
+				A calmer way
+				<span>to launch</span>
+				what’s next.
+			</h1>
 
-      <div class="luxury-line" aria-hidden="true"></div>
+			<div class="luxury-line" aria-hidden="true"></div>
 
-      <p class="lead" id="lead">
-        LUMA is a new digital experience for thoughtful teams, curious creators,
-        and beautifully ambitious ideas. Join the waitlist and get first access
-        when the beta opens.
-      </p>
+			<p class="lead" id="lead">
+				LUMA is a new digital experience for thoughtful teams, curious creators,
+				and beautifully ambitious ideas. Join the waitlist and get first access
+				when the beta opens.
+			</p>
 
-      <div class="countdown" aria-label="Launch countdown">
-        <div class="time-box">
-          <strong id="days">14</strong>
-          <span data-i18n="daysLabel">Days</span>
-        </div>
-        <div class="time-box">
-          <strong id="hours">08</strong>
-          <span data-i18n="hoursLabel">Hours</span>
-        </div>
-        <div class="time-box">
-          <strong id="minutes">32</strong>
-          <span data-i18n="minutesLabel">Min</span>
-        </div>
-      </div>
+			<div class="countdown" aria-label="Launch countdown">
+				<div class="time-box">
+					<strong id="days">14</strong>
+					<span data-i18n="daysLabel">Days</span>
+				</div>
+				<div class="time-box">
+					<strong id="hours">08</strong>
+					<span data-i18n="hoursLabel">Hours</span>
+				</div>
+				<div class="time-box">
+					<strong id="minutes">32</strong>
+					<span data-i18n="minutesLabel">Min</span>
+				</div>
+			</div>
 
-      <p class="social-proof" id="socialProof">
-        <span class="social-proof-value" id="socialProofValue">3100</span>
-        <span class="social-proof-label" id="socialProofLabel">creators already joined the waitlist</span>
-      </p>
+			<p class="social-proof" id="socialProof">
+				<span class="social-proof-value" id="socialProofValue">3100</span>
+				<span class="social-proof-label" id="socialProofLabel">creators already joined the waitlist</span>
+			</p>
 
-      <form class="signup" id="signupForm" novalidate data-endpoint="https://example.com/api/waitlist">
-        <label class="sr-only" for="email" id="emailLabel">Email</label>
+			<form class="signup" id="signupForm" novalidate data-endpoint="https://example.com/api/waitlist">
+				<label class="sr-only" for="email" id="emailLabel">Email</label>
 
-        <div class="input-shell" id="inputShell">
-          <input
-            id="email"
-            name="email"
-            type="email"
-            inputmode="email"
-            placeholder="Enter your email"
-            required
-            autocomplete="email"
-            aria-describedby="emailError successMessage"
-            aria-invalid="false"
-          />
-        </div>
+				<div class="input-shell" id="inputShell">
+					<input id="email" name="email" type="email" inputmode="email" placeholder="Enter your email" required autocomplete="email" aria-describedby="emailError successMessage" aria-invalid="false" />
+				</div>
 
-        <button type="submit" id="submitBtn">
-          <span class="btn-label" id="submitBtnLabel">Request Access</span>
-          <span class="btn-loader" id="submitBtnLoader" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-        </button>
-      </form>
+				<button type="submit" id="submitBtn">
+					<span class="btn-label" id="submitBtnLabel">Request Access</span>
+					<span class="btn-loader" id="submitBtnLoader" aria-hidden="true">
+						<span></span><span></span><span></span>
+					</span>
+				</button>
+			</form>
 
-      <p class="error-message" id="emailError" aria-live="polite"></p>
+			<p class="error-message" id="emailError" aria-live="polite"></p>
 
-      <div class="action-row">
-        <button type="button" class="secondary-btn" id="copyInviteBtn">Copy invite text</button>
-      </div>
+			<div class="action-row">
+				<button type="button" class="secondary-btn" id="copyInviteBtn">Copy invite text</button>
+			</div>
 
-      <p class="success-message" id="successMessage" aria-live="polite" role="status">
-        You’re in — we’ll be in touch.
-      </p>
+			<p class="success-message" id="successMessage" aria-live="polite" role="status">
+				You’re in — we’ll be in touch.
+			</p>
 
-      <p class="microcopy" id="microcopy">
-        Three visual directions. One shared layout. Switch styles to preview the system.
-      </p>
-    </section>
+			<p class="microcopy" id="microcopy">
+				Three visual directions. One shared layout. Switch styles to preview the system.
+			</p>
+		</section>
 
-    <aside class="visual" aria-hidden="true" data-reveal="fade-left">
-      <div class="visual-frame" data-parallax="10">
-        <div class="visual-orbit orbit-1"></div>
-        <div class="visual-orbit orbit-2"></div>
+		<aside class="visual" aria-hidden="true" data-reveal="fade-left">
+			<div class="visual-frame" data-parallax="10">
+				<div class="visual-orbit orbit-1"></div>
+				<div class="visual-orbit orbit-2"></div>
 
-        <div class="glass-panel" id="glassPanel">
-          <div class="glass-highlight"></div>
+				<div class="glass-panel" id="glassPanel">
+					<div class="glass-highlight"></div>
 
-          <p class="panel-kicker" id="panelKicker">Interface Preview</p>
-          <h2 id="panelTitle">Early Access Dashboard</h2>
-          <p class="panel-description" id="panelDescription">
-            A quiet control surface for launches, updates, and early invites.
-          </p>
+					<p class="panel-kicker" id="panelKicker">Interface Preview</p>
+					<h2 id="panelTitle">Early Access Dashboard</h2>
+					<p class="panel-description" id="panelDescription">
+						A quiet control surface for launches, updates, and early invites.
+					</p>
 
-          <div class="hero-card">
-            <div class="hero-glow"></div>
-            <div class="hero-grid"></div>
-            <div class="panel-shimmer" id="panelShimmer"></div>
-          </div>
+					<div class="hero-card">
+						<div class="hero-glow"></div>
+						<div class="hero-grid"></div>
+						<div class="panel-shimmer" id="panelShimmer"></div>
+					</div>
 
-          <div class="stats-row">
-            <div class="mini-card">
-              <span id="statLabel1">Waitlist</span>
-              <strong id="statValue1">3.1k</strong>
-            </div>
-            <div class="mini-card">
-              <span id="statLabel2">Launch</span>
-              <strong id="statValue2">July</strong>
-            </div>
-          </div>
+					<div class="stats-row">
+						<div class="mini-card">
+							<span id="statLabel1">Waitlist</span>
+							<strong id="statValue1">3.1k</strong>
+						</div>
+						<div class="mini-card">
+							<span id="statLabel2">Launch</span>
+							<strong id="statValue2">July</strong>
+						</div>
+					</div>
 
-          <div class="panel-lines">
-            <span></span>
-            <span></span>
-            <span class="short"></span>
-          </div>
-        </div>
+					<div class="panel-lines">
+						<span></span>
+						<span></span>
+						<span class="short"></span>
+					</div>
+				</div>
 
-        <div class="floating-chip chip-1" data-parallax="18" id="chip1">Early Access</div>
-        <div class="floating-chip chip-2" data-parallax="24" id="chip2">Invite Only</div>
-        <div class="floating-chip chip-3" data-parallax="16" id="chip3">Built for Launch</div>
-      </div>
-    </aside>
-  </main>
+				<div class="floating-chip chip-1" data-parallax="18" id="chip1">Early Access</div>
+				<div class="floating-chip chip-2" data-parallax="24" id="chip2">Invite Only</div>
+				<div class="floating-chip chip-3" data-parallax="16" id="chip3">Built for Launch</div>
+			</div>
+		</aside>
+	</main>
 
-  <div class="intro-screen" id="introScreen" aria-hidden="true">
-    <button type="button" class="intro-skip" id="introSkipBtn">Skip</button>
-    <div class="intro-brand">LUMA</div>
-  </div>
+	<div class="intro-screen" id="introScreen" aria-hidden="true">
+		<button type="button" class="intro-skip" id="introSkipBtn">Skip</button>
+		<div class="intro-brand">LUMA</div>
+	</div>
 </div>

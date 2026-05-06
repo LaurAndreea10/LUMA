@@ -1,149 +1,244 @@
-<div class="page theme-minimal" id="page">
-	<div class="theme-flash" id="themeFlash"></div>
-	<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Setări de bază pentru browser -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<div class="ambient ambient-1" data-parallax="20"></div>
-	<div class="ambient ambient-2" data-parallax="30"></div>
-	<div class="ambient ambient-3" data-parallax="14"></div>
+  <!-- Titlul paginii din tab-ul browserului -->
+  <title>LUMA</title>
 
-	<header class="topbar" data-reveal="fade-down">
-		<div class="brand" aria-label="LUMA">LUMA</div>
+  <!-- Descriere pentru SEO / preview -->
+  <meta
+    name="description"
+    content="LUMA - a calmer way to launch what’s next. Landing page cu waitlist, schimbare de stil și suport bilingv."
+  />
 
-		<div class="controls-group">
-			<div class="controls">
-				<label for="themeSelect" class="theme-label">Style</label>
-				<select id="themeSelect" aria-label="Choose style">
-					<option value="minimal">Minimal</option>
-					<option value="retro">Playful Retro</option>
-					<option value="luxury">Luxury Editorial</option>
-				</select>
-			</div>
+  <!-- Fișierul CSS local.
+       Pentru GitHub Pages pe /LUMA/ e bine să folosim cale relativă -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Containerul principal al întregii aplicații -->
+  <div class="page theme-minimal" id="page">
 
-			<div class="lang-toggle" role="group" aria-label="Choose language">
-				<button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-				<button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
-			</div>
+    <!-- Efect vizual scurt când se schimbă tema -->
+    <div class="theme-flash" id="themeFlash"></div>
 
-			<button type="button" class="replay-btn" id="replayIntroBtn">Replay Intro</button>
-		</div>
-	</header>
+    <!-- Efect luminos care urmărește cursorul -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-	<main class="split-layout">
-		<section class="content" data-reveal="fade-up">
-			<p class="status-badge" id="statusBadge">Private Beta • July 2026</p>
-			<p class="eyebrow" id="eyebrow">May 2026 CodePen Challenge</p>
+    <!-- Elemente decorative de fundal pentru profunzime -->
+    <div class="ambient ambient-1" data-parallax="20"></div>
+    <div class="ambient ambient-2" data-parallax="30"></div>
+    <div class="ambient ambient-3" data-parallax="14"></div>
 
-			<h1 id="title">
-				A calmer way
-				<span>to launch</span>
-				what’s next.
-			</h1>
+    <!-- Bara de sus -->
+    <header class="topbar" data-reveal="fade-down">
+      <!-- Brand / logo text -->
+      <div class="brand" aria-label="LUMA">LUMA</div>
 
-			<div class="luxury-line" aria-hidden="true"></div>
+      <!-- Grupul de controale din dreapta -->
+      <div class="controls-group">
 
-			<p class="lead" id="lead">
-				LUMA is a new digital experience for thoughtful teams, curious creators,
-				and beautifully ambitious ideas. Join the waitlist and get first access
-				when the beta opens.
-			</p>
+        <!-- Selector pentru stilul vizual -->
+        <div class="controls">
+          <label for="themeSelect" class="theme-label">Style</label>
+          <select id="themeSelect" aria-label="Choose style">
+            <option value="minimal">Minimal</option>
+            <option value="retro">Playful Retro</option>
+            <option value="luxury">Luxury Editorial</option>
+          </select>
+        </div>
 
-			<div class="countdown" aria-label="Launch countdown">
-				<div class="time-box">
-					<strong id="days">14</strong>
-					<span data-i18n="daysLabel">Days</span>
-				</div>
-				<div class="time-box">
-					<strong id="hours">08</strong>
-					<span data-i18n="hoursLabel">Hours</span>
-				</div>
-				<div class="time-box">
-					<strong id="minutes">32</strong>
-					<span data-i18n="minutesLabel">Min</span>
-				</div>
-			</div>
+        <!-- Comutator limbă EN / RO -->
+        <div class="lang-toggle" role="group" aria-label="Choose language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
+        </div>
 
-			<p class="social-proof" id="socialProof">
-				<span class="social-proof-value" id="socialProofValue">3100</span>
-				<span class="social-proof-label" id="socialProofLabel">creators already joined the waitlist</span>
-			</p>
+        <!-- Buton care reafișează intro-ul -->
+        <button type="button" class="replay-btn" id="replayIntroBtn">Replay Intro</button>
+      </div>
+    </header>
 
-			<form class="signup" id="signupForm" novalidate data-endpoint="https://example.com/api/waitlist">
-				<label class="sr-only" for="email" id="emailLabel">Email</label>
+    <!-- Zona principală împărțită în 2 coloane -->
+    <main class="split-layout">
 
-				<div class="input-shell" id="inputShell">
-					<input id="email" name="email" type="email" inputmode="email" placeholder="Enter your email" required autocomplete="email" aria-describedby="emailError successMessage" aria-invalid="false" />
-				</div>
+      <!-- Coloana stângă: conținutul principal -->
+      <section class="content" data-reveal="fade-up">
 
-				<button type="submit" id="submitBtn">
-					<span class="btn-label" id="submitBtnLabel">Request Access</span>
-					<span class="btn-loader" id="submitBtnLoader" aria-hidden="true">
-						<span></span><span></span><span></span>
-					</span>
-				</button>
-			</form>
+        <!-- Badge de status -->
+        <p class="status-badge" id="statusBadge">Private Beta • July 2026</p>
 
-			<p class="error-message" id="emailError" aria-live="polite"></p>
+        <!-- Text mic de context -->
+        <p class="eyebrow" id="eyebrow">May 2026 CodePen Challenge</p>
 
-			<div class="action-row">
-				<button type="button" class="secondary-btn" id="copyInviteBtn">Copy invite text</button>
-			</div>
+        <!-- Titlul principal -->
+        <h1 id="title">
+          A calmer way
+          <span>to launch</span>
+          what’s next.
+        </h1>
 
-			<p class="success-message" id="successMessage" aria-live="polite" role="status">
-				You’re in — we’ll be in touch.
-			</p>
+        <!-- Linie decorativă folosită mai ales în tema luxury -->
+        <div class="luxury-line" aria-hidden="true"></div>
 
-			<p class="microcopy" id="microcopy">
-				Three visual directions. One shared layout. Switch styles to preview the system.
-			</p>
-		</section>
+        <!-- Text de prezentare -->
+        <p class="lead" id="lead">
+          LUMA is a new digital experience for thoughtful teams, curious creators,
+          and beautifully ambitious ideas. Join the waitlist and get first access
+          when the beta opens.
+        </p>
 
-		<aside class="visual" aria-hidden="true" data-reveal="fade-left">
-			<div class="visual-frame" data-parallax="10">
-				<div class="visual-orbit orbit-1"></div>
-				<div class="visual-orbit orbit-2"></div>
+        <!-- Countdown până la lansare -->
+        <div class="countdown" aria-label="Launch countdown">
+          <div class="time-box">
+            <strong id="days">14</strong>
+            <span data-i18n="daysLabel">Days</span>
+          </div>
+          <div class="time-box">
+            <strong id="hours">08</strong>
+            <span data-i18n="hoursLabel">Hours</span>
+          </div>
+          <div class="time-box">
+            <strong id="minutes">32</strong>
+            <span data-i18n="minutesLabel">Min</span>
+          </div>
+        </div>
 
-				<div class="glass-panel" id="glassPanel">
-					<div class="glass-highlight"></div>
+        <!-- Dovadă socială -->
+        <p class="social-proof" id="socialProof">
+          <span class="social-proof-value" id="socialProofValue">3100</span>
+          <span class="social-proof-label" id="socialProofLabel">
+            creators already joined the waitlist
+          </span>
+        </p>
 
-					<p class="panel-kicker" id="panelKicker">Interface Preview</p>
-					<h2 id="panelTitle">Early Access Dashboard</h2>
-					<p class="panel-description" id="panelDescription">
-						A quiet control surface for launches, updates, and early invites.
-					</p>
+        <!-- Formularul de înscriere -->
+        <form
+          class="signup"
+          id="signupForm"
+          novalidate
+          data-endpoint="https://example.com/api/waitlist"
+        >
+          <!-- Label ascuns vizual, dar util pentru accesibilitate -->
+          <label class="sr-only" for="email" id="emailLabel">Email</label>
 
-					<div class="hero-card">
-						<div class="hero-glow"></div>
-						<div class="hero-grid"></div>
-						<div class="panel-shimmer" id="panelShimmer"></div>
-					</div>
+          <!-- Containerul inputului -->
+          <div class="input-shell" id="inputShell">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              placeholder="Enter your email"
+              required
+              autocomplete="email"
+              aria-describedby="emailError successMessage"
+              aria-invalid="false"
+            />
+          </div>
 
-					<div class="stats-row">
-						<div class="mini-card">
-							<span id="statLabel1">Waitlist</span>
-							<strong id="statValue1">3.1k</strong>
-						</div>
-						<div class="mini-card">
-							<span id="statLabel2">Launch</span>
-							<strong id="statValue2">July</strong>
-						</div>
-					</div>
+          <!-- Buton submit -->
+          <button type="submit" id="submitBtn">
+            <span class="btn-label" id="submitBtnLabel">Request Access</span>
 
-					<div class="panel-lines">
-						<span></span>
-						<span></span>
-						<span class="short"></span>
-					</div>
-				</div>
+            <!-- Loader vizual afișat în timpul trimiterii -->
+            <span class="btn-loader" id="submitBtnLoader" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
+        </form>
 
-				<div class="floating-chip chip-1" data-parallax="18" id="chip1">Early Access</div>
-				<div class="floating-chip chip-2" data-parallax="24" id="chip2">Invite Only</div>
-				<div class="floating-chip chip-3" data-parallax="16" id="chip3">Built for Launch</div>
-			</div>
-		</aside>
-	</main>
+        <!-- Mesaj de eroare pentru email / submit -->
+        <p class="error-message" id="emailError" aria-live="polite"></p>
 
-	<div class="intro-screen" id="introScreen" aria-hidden="true">
-		<button type="button" class="intro-skip" id="introSkipBtn">Skip</button>
-		<div class="intro-brand">LUMA</div>
-	</div>
-</div>
+        <!-- Acțiuni secundare -->
+        <div class="action-row">
+          <button type="button" class="secondary-btn" id="copyInviteBtn">
+            Copy invite text
+          </button>
+        </div>
+
+        <!-- Mesaj de succes după submit -->
+        <p class="success-message" id="successMessage" aria-live="polite" role="status">
+          You’re in — we’ll be in touch.
+        </p>
+
+        <!-- Text explicativ mic -->
+        <p class="microcopy" id="microcopy">
+          Three visual directions. One shared layout. Switch styles to preview the system.
+        </p>
+      </section>
+
+      <!-- Coloana dreaptă: preview vizual -->
+      <aside class="visual" aria-hidden="true" data-reveal="fade-left">
+        <div class="visual-frame" data-parallax="10">
+
+          <!-- Cercuri decorative animate -->
+          <div class="visual-orbit orbit-1"></div>
+          <div class="visual-orbit orbit-2"></div>
+
+          <!-- Cardul principal de preview -->
+          <div class="glass-panel" id="glassPanel">
+            <div class="glass-highlight"></div>
+
+            <!-- Titlul mic al panoului -->
+            <p class="panel-kicker" id="panelKicker">Interface Preview</p>
+
+            <!-- Titlul principal al panoului -->
+            <h2 id="panelTitle">Early Access Dashboard</h2>
+
+            <!-- Descrierea panoului -->
+            <p class="panel-description" id="panelDescription">
+              A quiet control surface for launches, updates, and early invites.
+            </p>
+
+            <!-- Zona grafică mare -->
+            <div class="hero-card">
+              <div class="hero-glow"></div>
+              <div class="hero-grid"></div>
+              <div class="panel-shimmer" id="panelShimmer"></div>
+            </div>
+
+            <!-- Statistici rapide -->
+            <div class="stats-row">
+              <div class="mini-card">
+                <span id="statLabel1">Waitlist</span>
+                <strong id="statValue1">3.1k</strong>
+              </div>
+              <div class="mini-card">
+                <span id="statLabel2">Launch</span>
+                <strong id="statValue2">July</strong>
+              </div>
+            </div>
+
+            <!-- Linii decorative -->
+            <div class="panel-lines">
+              <span></span>
+              <span></span>
+              <span class="short"></span>
+            </div>
+          </div>
+
+          <!-- Etichete plutitoare decorative -->
+          <div class="floating-chip chip-1" data-parallax="18" id="chip1">Early Access</div>
+          <div class="floating-chip chip-2" data-parallax="24" id="chip2">Invite Only</div>
+          <div class="floating-chip chip-3" data-parallax="16" id="chip3">Built for Launch</div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Ecran intro afișat la intrarea pe pagină -->
+    <div class="intro-screen" id="introScreen" aria-hidden="true">
+      <button type="button" class="intro-skip" id="introSkipBtn">Skip</button>
+      <div class="intro-brand">LUMA</div>
+    </div>
+  </div>
+
+  <!-- Fișierul JS local.
+       Se pune la final ca HTML-ul să fie deja încărcat înainte de script -->
+  <script src="./script.js"></script>
+</body>
+</html>
